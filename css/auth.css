@@ -1,0 +1,384 @@
+/* Auth Pages Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-secondary);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left Side - Image */
+.auth-left {
+  flex: 1;
+  background-color: var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-logo {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.auth-logo img {
+  height: 40px;
+}
+
+.auth-image {
+  flex: 1;
+  position: relative;
+}
+
+.auth-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.auth-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: #fff;
+}
+
+.auth-image-overlay h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.auth-image-overlay p {
+  font-size: 16px;
+  margin: 0;
+  opacity: 0.9;
+  max-width: 80%;
+}
+
+/* Right Side - Form */
+.auth-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: var(--bg-primary);
+}
+
+.auth-form-container {
+  width: 100%;
+  max-width: 450px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-header h1 {
+  font-size: 28px;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.auth-header p {
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* Social Login Buttons */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.social-btn i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.facebook-btn {
+  color: #3b5998;
+}
+
+.facebook-btn:hover {
+  background-color: rgba(59, 89, 152, 0.1);
+}
+
+.google-btn {
+  color: #db4437;
+}
+
+.google-btn:hover {
+  background-color: rgba(219, 68, 55, 0.1);
+}
+
+/* Divider */
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 25px 0;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--divider-color);
+}
+
+.divider span {
+  position: relative;
+  background-color: var(--bg-primary);
+  padding: 0 15px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* Form Styles */
+.auth-form {
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 0;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+}
+
+.input-with-icon input:focus {
+  outline: none;
+  border-color: var(--input-focus);
+}
+
+.input-with-icon i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.toggle-password:hover {
+  color: var(--accent-color);
+}
+
+.form-error {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+  min-height: 20px;
+}
+
+/* Password Strength Meter */
+.password-strength {
+  margin-top: 10px;
+}
+
+.strength-meter {
+  height: 5px;
+  background-color: var(--bg-secondary);
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.strength-bar {
+  height: 100%;
+  width: 0;
+  border-radius: 3px;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.strength-text {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+/* Form Options */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me input {
+  margin-right: 8px;
+}
+
+.forgot-password {
+  color: var(--accent-color);
+  font-size: 14px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Terms Checkbox */
+.form-group.terms {
+  display: flex;
+  align-items: flex-start;
+}
+
+.form-group.terms input {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.form-group.terms label {
+  font-weight: normal;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.form-group.terms a {
+  color: var(--accent-color);
+}
+
+.form-group.terms a:hover {
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.btn-auth {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-auth:hover {
+  opacity: 0.9;
+}
+
+/* Auth Footer */
+.auth-footer {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.create-account,
+.login-link {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.create-account:hover,
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .auth-container {
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+  }
+
+  .auth-left {
+    display: none;
+  }
+
+  .auth-right {
+    padding: 40px 20px;
+  }
+
+  .auth-form-container {
+    max-width: 100%;
+  }
+
+  .divider span {
+    background-color: var(--bg-primary);
+  }
+}
+
+@media (max-width: 576px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}

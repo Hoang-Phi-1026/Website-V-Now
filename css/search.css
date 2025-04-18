@@ -1,0 +1,105 @@
+/* Styles for search functionality */
+
+/* Search bar in header */
+.search-bar {
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  outline: none;
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  transition: all 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 2px rgba(18, 40, 56, 0.1);
+}
+
+.search-bar button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.search-bar button:hover {
+  color: var(--accent-color);
+}
+
+/* Search suggestions */
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-card);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.suggestion-item:hover {
+  background-color: var(--bg-secondary);
+}
+
+.suggestion-icon {
+  margin-right: 10px;
+  color: var(--text-light);
+}
+
+.suggestion-text {
+  flex: 1;
+  color: var(--text-primary);
+}
+
+/* Search results page */
+.search-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.search-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.search-header h1 {
+  font-size: 32px;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.search-header p {
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 100%;
+  }
+}

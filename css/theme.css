@@ -1,0 +1,75 @@
+/* Theme Variables */
+:root {
+  /* Light Theme (Default) */
+  --primary-color: #f9e4bc;
+  --accent-color: #122838;
+  --accent-color2: #f9e4bc;
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-light: #777777;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f8f8;
+  --bg-card: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --header-bg: #ffffff;
+  --footer-bg: #122838;
+  --footer-text: #ffffff;
+  --btn-primary-bg: #122838;
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #ffffff;
+  --btn-secondary-text: #122838;
+  --btn-secondary-border: #122838;
+  --input-bg: #ffffff;
+  --input-border: #dddddd;
+  --input-focus: #122838;
+  --category-icon-bg: #f9e4bc;
+  --category-icon-color: #122838;
+  --event-date-bg: rgba(255, 255, 255, 0.9);
+  --event-date-text: #122838;
+  --event-price-color: #122838;
+  --divider-color: #dddddd;
+  --social-hover: #f9e4bc;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary-color: #122838;
+  --accent-color: #f9e4bc;
+  --accent-color2: #f9e4bc;
+  --text-primary: #f0f0f0;
+  --text-secondary: #cccccc;
+  --text-light: #aaaaaa;
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #252525;
+  --bg-card: #2a2a2a;
+  --border-color: #444444;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --header-bg: #122838;
+  --footer-bg: #0a1520;
+  --footer-text: #f0f0f0;
+  --btn-primary-bg: #f9e4bc;
+  --btn-primary-text: #122838;
+  --btn-secondary-bg: transparent;
+  --btn-secondary-text: #f9e4bc;
+  --btn-secondary-border: #f9e4bc;
+  --input-bg: #333333;
+  --input-border: #555555;
+  --input-focus: #f9e4bc;
+  --category-icon-bg: #122838;
+  --category-icon-color: #f9e4bc;
+  --event-date-bg: rgba(18, 40, 56, 0.9);
+  --event-date-text: #f9e4bc;
+  --event-price-color: #f9e4bc;
+  --divider-color: #444444;
+  --social-hover: #122838;
+}
+
+/* Smooth transition for theme switching */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
